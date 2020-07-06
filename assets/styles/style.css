@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* text-shadow: .2px .2px 2px rgb( 0, 0, 0, .2); */
 }
 
 body {
@@ -38,13 +39,16 @@ header {
 }
 
 .header > ul > li > i {
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 50% 50% 50% 50%;
-  padding: 1% 3% 1% 3%;
+  padding-left: 241px;
+  margin-top: 4px;
+  color: white;
 }
 
-.header_search {
+.header__search i {
+  position: absolute;
+}
+
+.header__search__input {
   border: none;
   margin-right: 20px;
   border-radius: 20px;
@@ -106,6 +110,8 @@ main {
 .banner {
   height: 575px;
   background-color: #fafafa;
+  display: flex;
+  align-items: center;
 }
 
 .info {
@@ -212,6 +218,8 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 0px 20px 0 20px;
+  font-family: "Roboto Slab", serif;
+  font-size: 10pt;
 }
 
 .footer__heading {

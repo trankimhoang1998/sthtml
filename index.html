@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/styles/carousel.css">
 </head>
 
 <body>
@@ -19,7 +20,10 @@
             <li><a href="#">| Login</a></li>
             <li><a href="#">| Rss Feeds</a></li>
             <li><a href="#">| Archives</a></li>
-            <li><input type="text" class="header_search"></li>
+            <li class="header__search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input type="text" class="header__search__input">           
+            </li>
         </ul>
 
         <nav>
@@ -52,7 +56,16 @@
     <main>
         <section>
             <figure class="banner">
-
+                <div class="gallery">
+                    <div class="gallery-container">
+                      <img class="gallery-item" src="http://fakeimg.pl/300/?text=1">
+                      <img class="gallery-item" src="http://fakeimg.pl/300/?text=2">
+                      <img class="gallery-item" src="http://fakeimg.pl/300/?text=3">
+                      <img class="gallery-item" src="http://fakeimg.pl/300/?text=4">
+                      <img class="gallery-item" src="http://fakeimg.pl/300/?text=5">
+                    </div>
+                    <div class="gallery-controls"></div>
+                  </div>
             </figure>
         </section>
         <section>
@@ -181,6 +194,7 @@
         </section>
     </footer>
     <!-- End-Footer -->
+    <script src="assets/styles/carousel.js"></script>
 </body>
 
 </html>
