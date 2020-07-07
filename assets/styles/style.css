@@ -16,20 +16,29 @@ header {
   background-color: #ededed;
 }
 
-.header > ul {
+.header div > ul {
   height: 75px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 }
 
-.header > ul > li {
+.header__top__ul li a::after {
+  content: "|";
+  margin-left: 5px;
+}
+
+.header__top__ul li:last-child a::after {
+  content: "";
+}
+
+.header div > ul > li {
   list-style-type: none;
 }
 
-.header > ul > li > a {
+.header div > ul > li > a {
   text-decoration: none;
-  font-family: "Roboto Slab", serif;
+  font-family: "Roboto", sans-serif;
   color: #9f9f9f;
   margin-right: 5px;
 }
@@ -38,26 +47,32 @@ header {
   color: red;
 }
 
-.header__search{
-  position: relative;
+.header__top {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
-.header > ul > li > i {
-  margin-top: 4px;
-  color: #c8c8c8;
-  height: 21px;
-  width: 21px;
+.header__search {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .header__search i {
+  margin-top: 4px;
+  color: #c8c8c8;
+  height: 20px;
+  width: 20px;
   position: absolute;
   background-color: #fafafa;
-  right: 22px;
+  right: 23px;
   border-radius: 50% 50% 50% 50%;
   font-size: 15px;
   padding-left: 3px;
   padding-top: 2px;
-  top:-2px
+  top: -2px;
 }
 
 .header__search__input {
@@ -88,7 +103,7 @@ header {
 
 .header div > a p {
   font-size: 14px;
-  font-family: "Roboto Slab", serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .nav__menu {
@@ -106,11 +121,13 @@ header {
 .nav__menu li a {
   text-decoration: none;
   text-transform: uppercase;
-  color: #666666;
+  font-family: "Roboto", sans-serif;
+  color: black!important;
+  font-weight: bold;
 }
 
 .nav__menu li p {
-  font-family: "Roboto Slab", serif;
+  font-family: "Roboto", sans-serif;
   font-size: 13px;
 }
 
@@ -184,13 +201,15 @@ hr {
 
 .content section > section > article > img {
   box-shadow: -2px 14px 21px -9px rgba(0, 0, 0, 0.63);
+  width: 225px;
+  height: 140px;
 }
 
 .content section > section > article > p {
   padding-top: 18px;
   padding-bottom: 8px;
   font-size: 10pt;
-  font-family: "Roboto Slab", serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .content section > section > article > a {
@@ -208,7 +227,7 @@ hr {
 
 .conten__aside__bottom {
   font-size: 10pt;
-  font-family: "Roboto Slab", serif;
+  font-family: "Roboto", sans-serif;
 }
 
 footer {
@@ -222,6 +241,7 @@ footer {
   background-color: #ededed;
   grid-gap: 15px;
   padding: 20px;
+  padding-top: 30px;
 }
 
 .footer__section__bottom {
@@ -231,7 +251,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 0px 20px 0 20px;
-  font-family: "Roboto Slab", serif;
+  font-family: "Roboto", sans-serif;
   font-size: 10pt;
 }
 
@@ -244,7 +264,7 @@ footer {
 
 .footer__p {
   font-size: 10pt;
-  font-family: "Roboto Slab", serif;
+  font-family: "Roboto", sans-serif;
   margin-top: 5px;
   margin-bottom: 15px;
 }
@@ -262,6 +282,13 @@ footer {
   margin-bottom: 10px;
   margin-right: 10px;
   border: 1px solid gray;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    171deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(249, 249, 249, 1) 0%,
+    rgba(207, 213, 214, 1) 71%
+  );
 }
 
 .footer__section__top__left button {
@@ -272,6 +299,13 @@ footer {
   width: 80px;
   color: red;
   margin-bottom: 20px;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    171deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(249, 249, 249, 1) 0%,
+    rgba(207, 213, 214, 1) 71%
+  );
 }
 
 .staysocial {
@@ -298,12 +332,21 @@ footer {
   margin-right: 10px;
 }
 
+.staysocial > div > a{
+  color: #666666;
+}
+
+
 .footer__a {
   color: red;
   float: right;
   text-decoration: none;
 }
 
-.footer__ppp{
-  font-weight: 500;
+.footer__pp {
+  font-size: 20px;
+}
+
+.footer__ppp {
+  color: #666666;
 }
